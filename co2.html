@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="mapdata.js"></script>
+  <script src="worldmap.js"></script>
+  <title>CO2 Emission Data</title>
+</head>
+  <body style="background-color: #F5F5DD;">
+    
+    <div style="display: flex;
+    justify-content: center; align-items: center; flex-direction: column; width: 100%;">
+      <h1 style="margin-top: 2%;">CO2 Emission Data</h1>
+      <!--<button type="button" id="switchButton" onclick="switchView();">View the world map!</button>--> <!--A button was used to switch between the pie chart and map, but I came to a conclusion that it adds unnecessary complexity, therefore is not needed.-->
+      <div class="flex-container" style="display: flex;
+      justify-content: center; align-items: center; width: 80%; margin: 2%; height: 100%;">
+
+        <div class="item" style="width: 40%;"> 
+          <canvas id="pieChart"></canvas> 
+        </div>
+
+        <div class="item" style="width: 50%;">
+          <h1 id="titleOfSelected"></h1>
+          <h2 id="selected">Click on the slices of the pie chart to view the information about the country.</h2>
+        </div>
+    
+      </div>
+
+      <h1 style="font: 500; margin-top: 2%;">Interactive map</h1>
+      <div style="width: 90%;">
+        <div id="map"></div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="data.js"></script>
+     
+    </body>
+</html>
